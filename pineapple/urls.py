@@ -15,7 +15,8 @@ urlpatterns = [
     # Order:
     #TODO
     # Comment:
-    #TODO
+    path("comment-create/", views.views_comments.comment_create_view, name="comment-create"),
+    path("seller-comment-list/<str:certificate_code>/", views.views_comments.seller_comment_list_view , name="seller-comment-list"),
     
 ]
 
