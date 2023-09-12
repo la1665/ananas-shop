@@ -6,6 +6,16 @@ from django.conf.urls.static import static
 app_name = "pineapple"
 
 urlpatterns = [
+    # Subscription:
+    #TODO
+    # Seller:
+    #TODO
+    # Pineapple:
+    #TODO
+    # Order:
+    #TODO
+    # Comment:
+    #TODO
     
 ]
 
