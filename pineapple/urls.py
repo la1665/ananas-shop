@@ -10,7 +10,11 @@ urlpatterns = [
     path("subscription-create/", views.views_subscription.subscription_create_view, name="subscription-create"),
     path("subscription-list/", views.views_subscription.subscription_list_view, name="subscription-list"),
     # Seller:
-    #TODO
+   path("seller-create/", views.views_sellers.seller_create_view, name="seller-create"),
+   path("seller-detail/<int:certificate_code>/", views.views_sellers.seller_detail_view, name="seller-detail"),
+   path("seller-list/", views.views_sellers.seller_list_view, name="seller-list"),
+   path("seller-update/<int:certificate_code>/", views.views_sellers.seller_update_view, name="seller-update"),
+
     # Pineapple:
     #TODO
     # Order:
