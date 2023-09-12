@@ -13,7 +13,10 @@ urlpatterns = [
     # Pineapple:
     #TODO
     # Order:
-    #TODO
+    path("order-list/", views.views_orders.order_list_view, name="order-list"),
+    path("order-detail/<int:pk>/", views.views_orders.order_detail_view, name="order-detail"),
+    path("order-create/", views.views_orders.order_create_view, name="order-create"),
+    path("order-update/<int:pk>/", views.views_orders.order_update_view, name="order-update"),
     # Comment:
     #TODO
     
