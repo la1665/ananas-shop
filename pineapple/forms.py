@@ -1,29 +1,28 @@
 from django import forms
-from django.core.exceptions import ValidationError
 
 from .models import *
+
 
 class SellerForm(forms.ModelForm):
     class Meta:
         model = Seller
-        fields = "ــallــ"
+        fields = "__all__"
 
     def clean_address(self):
         address = str(self.cleaned_data["address"])
         if len(address) < 10:
-            raise ValidationError("این فیلد باید بیشتر از ۱۰ کاراکتر باشد.")
-
+            raise forms.ValidationError("این فیلد باید بیشتر از ۱۰ کاراکتر باشد.")
         return address
 
     def clean_certificate_code(self):
         certificate_code = str(self.cleaned_data["certificate_code"])
         if certificate_code != certificate_code.upper():
-            raise ValidationError("حروف گواهینامه باید حروف بزرگ باشد.")
-
+            raise forms.ValidationError("حروف گواهینامه باید حروف بزرگ باشد.")
         return certificate_code
 
 
 class PineappleForm(forms.ModelForm):
+    
     class Meta :
         model = Pineapple
         fields = "__all__"
@@ -35,8 +34,10 @@ class PineappleForm(forms.ModelForm):
         elif price > 1000000 :
             raise forms.ValidationError("قیمت نباید از یک میلیون تومان بیشتر باشد.")
         return price
+  
 
 class OrderForm(forms.ModelForm):
+    
     class Meta:
         model = Order
         fields = '__all__'
@@ -50,6 +51,7 @@ class OrderForm(forms.ModelForm):
 
 
 class SubscriptionForm(forms.ModelForm):
+    
     class Meta:
         model = Subscription
         fields = '__all__'
@@ -63,6 +65,7 @@ class SubscriptionForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+
     class Meta:
         model = Comment
         fields = '__all__'
