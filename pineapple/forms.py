@@ -53,10 +53,14 @@ class SubscriptionForm(forms.ModelForm):
         msg = "شماره تلفن اشتباه است. شماره تلفن باید ۱۱ رقم باشد و با ۰۹ شروع شود."
         raise forms.ValidationError(msg)
 
-class CommentForm:
-    #TODO
-<<<<<<< HEAD
-    pass
-=======
-    pass
->>>>>>> feature/seller_form
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = '__all__'
+
+    def clean_text(self):
+        text = str(self.cleaned_data["text"])
+        if len(text) < 10:
+            raise forms.ValidationError("این فیلد باید بیشتر از ۱۰ کاراکتر باشد.")
+        return text
