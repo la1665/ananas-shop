@@ -3,21 +3,24 @@ from django.core.exceptions import ValidationError
 
 from .models import *
 
-class SellerForm:
-    
-    name = forms.CharField(max_length=256)
-    address = forms.CharField(widget=forms.Textarea)
-    certificate_code = forms.CharField(max_length=10)
+class SellerForm(forms.ModelForm):
+    class Meta:
+        model = Seller
+        fields = "all"
 
     def clean_address(self):
         address = str(self.cleaned_data["address"])
         if len(address) < 10:
             raise ValidationError("این فیلد باید بیشتر از ۱۰ کاراکتر باشد.")
 
+        return address
+
     def clean_certificate_code(self):
         certificate_code = str(self.cleaned_data["certificate_code"])
         if certificate_code != certificate_code.upper():
             raise ValidationError("حروف گواهینامه باید حروف بزرگ باشد.")
+
+        return certificate_code
 
 
 class PineappleForm:
