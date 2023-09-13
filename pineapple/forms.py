@@ -6,7 +6,7 @@ from .models import *
 class SellerForm(forms.ModelForm):
     class Meta:
         model = Seller
-        fields = "all"
+        fields = "ــallــ"
 
     def clean_address(self):
         address = str(self.cleaned_data["address"])
@@ -55,4 +55,8 @@ class SubscriptionForm(forms.ModelForm):
 
 class CommentForm:
     #TODO
+<<<<<<< HEAD
     pass
+=======
+    pass
+>>>>>>> feature/seller_form
