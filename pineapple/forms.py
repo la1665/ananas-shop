@@ -6,7 +6,7 @@ from .models import *
 class SellerForm(forms.ModelForm):
     class Meta:
         model = Seller
-        fields = "all"
+        fields = "__all__"
 
     def clean_address(self):
         address = str(self.cleaned_data["address"])
