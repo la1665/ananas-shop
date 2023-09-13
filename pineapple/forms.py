@@ -1,5 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from .models import *
+
 
 class SellerForm:
     
@@ -17,14 +19,26 @@ class SellerForm:
         if certificate_code != certificate_code.upper():
             raise ValidationError("حروف گواهینامه باید حروف بزرگ باشد.")
 
+
 class PineappleForm:
     pass
+
 
 class OrderForm:
     pass
 
+
 class SubscriptionForm:
     pass
 
-class CommentForm:
-    pass
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = '__all__'
+
+    def clean_text(self):
+        text = str(self.cleaned_data["text"])
+        if len(text) < 10:
+            raise forms.ValidationError("این فیلد باید بیشتر از ۱۰ کاراکتر باشد.")
+        return text
