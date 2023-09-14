@@ -5,8 +5,10 @@
 افزودن یک نظر جدید برای فروشنده
 {% endblock title %}
 
-<form method="post">
-    {{ form }}
-    <input type="submit" value="Submit">
+<!-- Add your Content Here -->
+{% block content %}
+<form method= 'POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" />
 </form>
-{% block content %}{% endblock content %}
+{% endblock content %}

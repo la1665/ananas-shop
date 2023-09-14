@@ -6,17 +6,13 @@
 لیست نظرات فروشنده
 {% endblock title %}
 
+<!-- Add your Content Here -->
 {% block content %}
-  {% if comments %}
-    <ul>
-      {% for comment in comments %}
-      <li>
-        ({{comment.name}})
-        ({{comment.text}})
-        ({{seller.name}})
-      </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endblock %}
-{% block content %}{% endblock content %}
+
+{% for comment in comments %}
+{{comment.name}}
+{{comment.seller.name}}
+{{comment.text}}
+{% endfor %}
+
+{% endblock content %}
