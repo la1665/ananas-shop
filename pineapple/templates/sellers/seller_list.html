@@ -2,7 +2,13 @@
 {% load static %}
 
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
+{% block title %}لیست فروشندگان{% endblock title %}
 
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+
+{% block content %}
+{% for seller in sellers %}
+{{ seller.name }}
+{{ seller.certificate_code }}
+{{ seller.address|slice:":20" }}
+{% endfor %}
+{% endblock content %}
