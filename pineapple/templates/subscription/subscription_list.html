@@ -2,8 +2,13 @@
 {% load static %}
 
 {% block title %}
-لیست خبرنامه
+    لیست خبرنامه
 {% endblock title %}
 
 <!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+    {% for subscription in subscriptions %}
+    {{ subscription.name }}
+    {{ subscription.phone_number }}
+    {% endfor %}
+{% endblock content %}
