@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}لیست فروشندگان{% endblock title %}
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
-
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+{% for seller in sellers %}
+<p>Seller: {{ seller.name }},
+    Certificate Code: {{ seller.certificate_code }}<br>
+    Address: {{ seller.address|slice:":20" }}
+</p><br>
+{% endfor %}
+{% endblock content %}

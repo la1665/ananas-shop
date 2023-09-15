@@ -3,5 +3,12 @@
 
 {% block title %}لیست سفارشات{% endblock title %}
 
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+{% for order in orders %}
+<p>Order: {{ order.name }}
+    Seller Name: {{ order.pineapple.seller.name }}
+    Weight: {{ order.weight_kg }}
+    Total Price: {% widthratio order.weight_kg 1 order.pineapple.price_toman %}
+</p><br>
+{% endfor %}
+{% endblock content %}

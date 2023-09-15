@@ -2,7 +2,9 @@
 {% load static %}
 
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
+{% block title %}صفحه‌ی داخلی آناناس{% endblock title %}
 
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+<h1>Pineapple Price : {{pineapple.price_toman}}</h1>
+<h1>Seller Certificate Code : {{pineapple.seller.certificate_code}}</h1>
+{% endblock content %}

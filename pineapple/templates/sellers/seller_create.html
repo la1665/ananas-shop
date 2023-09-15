@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}ساخت فروشنده آناناس{% endblock title %}
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
-
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+<h2>New Ananas Seller</h2>
+<form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit" class="save btn btn-default" style="background-color: greenyellow;">Create Seller</button>
+</form>
+{% endblock content %}

@@ -133,3 +133,6 @@ when the code finished and new feature added we merge the branch with dev
 '`git checkout dev`' then '`git pull origin dev`' and then '`git merge feature/Oath2-google`'
 
 after merge completed we push the code '`git push origin dev`'
+
+
+ok...

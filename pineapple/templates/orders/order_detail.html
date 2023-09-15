@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}صفحه داخلی سفارش{% endblock title %}
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
-
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+<h1>Order Name: {{ order.name }}</h1>
+<h1>Seller Name: {{ order.pineapple.seller.name }}</h1>
+<h1>Weight: {{ order.weight_kg }}</h1>
+<h1>Total Price: {% widthratio order.weight_kg 1 order.pineapple.price_toman %}</h1>
+{% endblock content %}
