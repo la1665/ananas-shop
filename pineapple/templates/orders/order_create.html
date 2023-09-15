@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}ثبت سفارش{% endblock title %}
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
-
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+    <h2>New Ananas Order</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Create Order</button>
+</form>
+{% endblock content %}

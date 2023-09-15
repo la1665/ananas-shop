@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-ثبت نام در خبرنامه
-{% endblock title %}
+{% block title %}ثبت نام در خبرنامه{% endblock title %}
 
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+<h2>New Subscription</h2>
+<form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Create Subscription</button>
+</form>
+{% endblock content %}

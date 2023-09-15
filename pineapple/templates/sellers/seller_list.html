@@ -5,8 +5,9 @@
 
 {% block content %}
 {% for seller in sellers %}
-<p>Seller: {{ seller.name }}
-    {{ seller.certificate_code }}
-    {{ seller.address|slice:":20" }}</p>
+<p>Seller: {{ seller.name }},
+    Certificate Code: {{ seller.certificate_code }}<br>
+    Address: {{ seller.address|slice:":20" }}
+</p><br>
 {% endfor %}
 {% endblock content %}
