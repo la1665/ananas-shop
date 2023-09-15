@@ -1,7 +1,7 @@
 # Ananas shop
 
 <!-- PROJECT SHIELDS -->
-[![Forks][forks-shield]][forks-url]
+[![Forks][forks-url]
 
 
 
@@ -39,7 +39,7 @@ It is powered by Python and Django.
 
 ### Built With
 
-* [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+* [![Python 3.10](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 * <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." /></a>
 <!-- * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -104,5 +104,4 @@ And mentored by:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/la1665/ananas-shop/forks
