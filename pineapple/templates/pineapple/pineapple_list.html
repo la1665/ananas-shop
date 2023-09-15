@@ -6,8 +6,8 @@
 
 {% block content %}
 {% for pineapple in pineapples %}
-    <p>Pineapple Price : {{pineapple.price}}
-        Seller Certificate_code : {{pineapple.seller.certificate_code}}
+    <p>Pineapple Price : {{pineapple.price_toman}}
+        Seller Certificate Code : {{pineapple.seller.certificate_code}}
     </p><br>
 {% endfor %}
 {% endblock content %}

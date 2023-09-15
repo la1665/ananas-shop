@@ -8,6 +8,7 @@
 <h2>New Ananas</h2>
     <form method="POST" class="post-form">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="save btn btn-default">Create Ananas</button>
+    <br>
+    <button type="submit" class="save btn btn-default" style="background-color: greenyellow;">Create Ananas</button>
 </form>
 {% endblock content %}
