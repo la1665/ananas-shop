@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block title %}صفحه تکی فروشنده{% endblock title %}
 
-
 {% block content %}
-{{ seller.name }}
-{{ seller.certificate_code }}
-{{ seller.address }}
+<h1>Name: {{ seller.name }}</h1>
+<h1>Certificate code: {{ seller.certificate_code }}</h1>
+<h1>Address: {{ seller.address }}</h1>
+
 {% endblock content %}
