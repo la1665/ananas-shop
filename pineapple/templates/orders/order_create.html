@@ -6,4 +6,13 @@
 
 <!-- Add your Content Here -->
 {% block content %}
+<<<<<<< HEAD
+=======
+    <form method="POST" class="post-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">ثبت</button>
+</form>
+
+>>>>>>> feature/Order_template
 {% endblock content %}
