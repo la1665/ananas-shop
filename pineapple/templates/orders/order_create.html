@@ -6,9 +6,4 @@
 
 <!-- Add your Content Here -->
 {% block content %}
-    <form method="POST" class="post-form">
-    {% csrf_token %}
-    {{ forms.as_p }}
-    <button type="submit" class="save btn btn-default">ثبت</button>
-    </form>
 {% endblock content %}
