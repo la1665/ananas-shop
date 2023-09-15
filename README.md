@@ -1,7 +1,7 @@
 # Ananas shop
 
 <p align="center">
-  <a href="https://pinia.vuejs.org" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/la1665/ananas-shop">
     <img width="180" src="https://pinia.vuejs.org/logo.svg" alt="Pinia logo">
   </a>
 </p>
